@@ -1,0 +1,26 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js: 
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  # slack: localmeetups-co:jejox
+  email:
+    recipients:
+      - carlosmazaroli@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provide: heroku
+  skip_cleanup: true
+  keep_history: true
+  api_key: c38f3e84-f01d-409c-a5a0-46f9efd996af
+  app: platzi-store-backend-mazzaroli
+  on:
+    repo: mazzaroli/platzi-store-backend
