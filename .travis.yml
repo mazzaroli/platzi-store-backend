@@ -13,7 +13,7 @@ notifications:
   # slack: localmeetups-co:jejox
   email:
     recipients:
-      - carlosmazaroli@gmail.com
+      - carlitosmazaroli@gmail.com
     on_success: always
     on_failure: always
 deploy:
