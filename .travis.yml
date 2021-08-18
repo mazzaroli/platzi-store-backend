@@ -10,7 +10,7 @@ git:
 script:
   - yarn test
 notifications:
-  # slack: localmeetups-co:jejox
+  # slack: localmeetups-co:jejox # Se encripta haciendo travis encrypt localmeetups-co:jejox 
   email:
     recipients:
       - carlitosmazaroli@gmail.com
@@ -20,7 +20,8 @@ deploy:
   provide: heroku
   skip_cleanup: true
   keep_history: true
-  api_key: c38f3e84-f01d-409c-a5a0-46f9efd996af
+  api_key: 
+    secure: "EYc9sfX/03bd0YBCMkPgevQAOJtKD7Cu3BHASTLwMc/XFMVP8M2KfFNkR5GJ3zi3tUl3HMqP4tUOW/8NoBN4Cjpz/4gI4ZPWSLxk7HCeyHlj8Ksy1OrtuQN4/4ixAvTL8TnN+Mo+qQrf1DjI9mcc/pioA4FZ5HCNdcm8sM362TqPV4fr0RaiM6G92Tmcnkhl44okMiYTRWSjdWGYn+tWTDGBw2D0m/fC3FOQmNK7sKYNYqrmR6T8pJalQL4nCs0rQikF6tCm/LOhRif6v4CqRCamYL+9wnODXPphqcQHjPhGTbP6z7RKcfBoMFgka009RGCrY5+MXsFSQXZTgRWf7ERzhJOUzaAagcFXYEFHpgBuGEc6D/gmjz4ybNSmWBAucg5Tpv6MeR+mCK1WGhMpbWrUB00vXM36yYFG7epexqyJkBfwjmjNy414D6x4PdSekdoIA9IIxS3zSiHS/qA0/85hxd7DUoRzdTamFKmfP6ZADdgD91GUbli1Z6hDqL+WAaCXzUB4IEHDVS+2daTynm4TeB+9PBsZMDFUmbKBmQwIZfmqDaSG84kPFP+DGpHIadL1utmQ3bxf75TyZhl5HQb7ueB6tCF9zUiN14MKWX/UqDohxqUa2LaotPHS1+IK3Q/qtGcd9UVh31CmxqmzW74qW7VzyA0w8eg0ujUx2Gc="
   app: platzi-store-backend-mazzaroli
   on:
     repo: mazzaroli/platzi-store-backend
